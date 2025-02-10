@@ -23,6 +23,6 @@ app.use("/graphql", graphqlHTTP({
     schema,
     graphiql: true
 }))
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 8081;
 app.listen(port, () => console.log("Sever is running..."))
 app.get('/', (req,res) => res.send("Auth system..."))
