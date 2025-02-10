@@ -6,7 +6,7 @@ import App from './App';
 const user = JSON.parse(localStorage.getItem('user'))
 
 const client = new ApolloClient({
-  uri: "https://hotelbooking-be.onrender.com/graphql",
+  uri: process.env.REACT_APP_GRAPHQL_URI || "http://backend:8081/graphql",  
   cache: new InMemoryCache(),
   headers: {
     authorization: user ? `Bearer ${user.accessToken}` : ' ',
